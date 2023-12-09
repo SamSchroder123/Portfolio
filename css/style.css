@@ -5,7 +5,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -20,4 +21,33 @@ h6 {
 
 p {
   margin: 0;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav .nav-item {
+  border-bottom: 4px;
+  border-style: solid;
+  border-color: black;
+  background-color: orange;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: aquamarine;
+}
+
+header h1 {
+  border-style: solid;
+  background-color: aqua;
+  border-color: black;
+  z-index: 1;
 }
