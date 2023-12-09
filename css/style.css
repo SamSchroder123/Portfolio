@@ -36,6 +36,17 @@ nav .nav-item {
   border-style: solid;
   border-color: black;
   background-color: orange;
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 20%;
+  box-shadow: 2.5px 5px #888888;
+  transition: box-shadow 0.2s;
+}
+
+.nav-item:active {
+  box-shadow: 0.2px 0.4px #888888;
+  border-style: solid;
+  border-color: black;
 }
 
 header {
