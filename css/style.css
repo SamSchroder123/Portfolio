@@ -1,3 +1,9 @@
+:root {
+  --row-height-short: 300px;
+  --row-height-tall: 400px;
+  --row-height-heading: 50px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,6 +23,14 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
 }
 
 p {
@@ -49,6 +63,84 @@ nav .nav-item {
   border-color: black;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+#work {
+  border: 0px;
+  border-left: 2px;
+  border-color: black;
+  border-style: solid;
+  padding-left: 20px;
+  display: grid;
+  width: 85%;
+  grid-template-columns: auto auto;
+  grid-template-rows:
+    var(--row-height-heading) var(--row-height-tall) var(--row-height-short)
+    var(--row-height-short);
+  grid-template-areas:
+    "heading heading"
+    "proj1 proj1"
+    "proj2 proj3"
+    "proj4 proj5";
+}
+
+.work-example {
+  border: 1px;
+  border-color: aqua;
+  border-style: solid;
+  position: relative;
+}
+
+.work-example h3 {
+  background-color: aqua;
+  position: absolute;
+  top: 125px;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+#work h2 {
+  grid-area: heading;
+  margin: 10px;
+}
+
+#proj2,
+#proj3,
+#proj4,
+#proj5 {
+  background-size: 100% var(--row-height-short);
+}
+
+#proj1 {
+  grid-area: proj1;
+  background-image: url(../images/02-portfolio-1.jpg);
+  background-size: 100% var(--row-height-tall);
+}
+
+#proj2 {
+  grid-area: proj2;
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+
+#proj3 {
+  grid-area: proj3;
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+
+#proj4 {
+  grid-area: proj4;
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+
+#proj5 {
+  grid-area: proj5;
+  background-image: url(../images/02-run-buddy.jpg);
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -60,5 +152,26 @@ header h1 {
   border-style: solid;
   background-color: aqua;
   border-color: black;
+  z-index: 1;
+}
+
+#hero-image {
+  width: 100%;
+  height: 100px;
+  background-image: url("../images/02-hero-bg.jpg");
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+#hero-image h2 {
+  margin: 55px;
+  border: 10px;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
   z-index: 1;
 }
