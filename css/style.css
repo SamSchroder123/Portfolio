@@ -75,7 +75,7 @@ nav .nav-item {
   border-style: solid;
   padding-left: 20px;
   display: grid;
-  width: 85%;
+  width: 75%;
   grid-template-columns: auto auto;
   grid-template-rows:
     var(--row-height-heading) var(--row-height-tall) var(--row-height-short)
@@ -87,11 +87,27 @@ nav .nav-item {
     "proj4 proj5";
 }
 
-.work-example {
+#work h2 {
+  grid-area: heading;
+  margin: 10px;
+}
+
+.work-example { 
   border: 1px;
   border-color: aqua;
   border-style: solid;
   position: relative;
+  filter: blur(6px);
+  transition-property: filter;
+  transition-duration: 1s;
+}
+.work-example img {
+  width: 100%;
+  height: 100%;
+}
+
+.work-example:hover {
+  filter: blur(0px);
 }
 
 .work-example h3 {
@@ -103,11 +119,6 @@ nav .nav-item {
   border-style: solid;
 }
 
-#work h2 {
-  grid-area: heading;
-  margin: 10px;
-}
-
 #proj2,
 #proj3,
 #proj4,
@@ -117,28 +128,23 @@ nav .nav-item {
 
 #proj1 {
   grid-area: proj1;
-  background-image: url(../images/02-portfolio-1.jpg);
   background-size: 100% var(--row-height-tall);
 }
 
 #proj2 {
   grid-area: proj2;
-  background-image: url(../images/02-portfolio-2.jpg);
 }
 
 #proj3 {
   grid-area: proj3;
-  background-image: url(../images/02-portfolio-3.jpg);
 }
 
 #proj4 {
   grid-area: proj4;
-  background-image: url(../images/02-portfolio-4.jpg);
 }
 
 #proj5 {
   grid-area: proj5;
-  background-image: url(../images/02-run-buddy.jpg);
 }
 
 header {
