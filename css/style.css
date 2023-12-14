@@ -76,15 +76,35 @@ nav .nav-item {
   padding-left: 20px;
   display: grid;
   width: 75%;
-  grid-template-columns: auto auto;
-  grid-template-rows:
-    var(--row-height-heading) var(--row-height-tall) var(--row-height-short)
-    var(--row-height-short);
-  grid-template-areas:
-    "heading heading"
-    "proj1 proj1"
-    "proj2 proj3"
-    "proj4 proj5";
+}
+@media (max-width: 480px) {
+  #work {
+    grid-template-columns: auto;
+    grid-template-rows:
+      var(--row-height-heading) var(--row-height-short) var(--row-height-short)
+      var(--row-height-short) var(--row-height-short) var(--row-height-short);
+    grid-template-areas:
+      "heading"
+      "proj1"
+      "proj2"
+      "proj3"
+      "proj4"
+      "proj5";
+  }
+}
+
+@media (min-width: 480px) {
+  #work {
+    grid-template-columns: auto auto;
+    grid-template-rows:
+      var(--row-height-heading) var(--row-height-tall) var(--row-height-short)
+      var(--row-height-short);
+    grid-template-areas:
+      "heading heading"
+      "proj1 proj1"
+      "proj2 proj3"
+      "proj4 proj5";
+  }
 }
 
 #work h2 {
@@ -92,7 +112,7 @@ nav .nav-item {
   margin: 10px;
 }
 
-.work-example { 
+.work-example {
   border: 1px;
   border-color: aqua;
   border-style: solid;
