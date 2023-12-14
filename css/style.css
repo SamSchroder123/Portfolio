@@ -25,6 +25,9 @@ h6 {
   margin: 0;
 }
 
+p,
+li,
+ul,
 h2,
 h3,
 h4,
@@ -69,14 +72,12 @@ nav .nav-item {
 }
 
 #work {
-  border: 0px;
-  border-left: 2px;
-  border-color: black;
-  border-style: solid;
+  border-left: 2px solid black;
   padding-left: 20px;
   display: grid;
   width: 75%;
 }
+
 @media (max-width: 480px) {
   #work {
     grid-template-columns: auto;
